@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title> Claculator</title>
+        <link rel="Stylesheet" type="text/css" href="style.css">
+        <script  src="calculator.js" type="text/javascript"></script>
+    </head>
+<body>
+<div class="main">
+    <form name="myForm">
+        <input type="text" name="textview " class="textview" disabled id="textview">
+    </form>
+    <table>
+        <tr>
+            <td><input type="button" class="button number" value="1"  onclick="insertNum(1);"></td>
+            <td><input type="button" class="button number" value="2" onclick="insertNum(2);"></td>
+            <td><input type="button" class="button number" value="3" onclick="insertNum(3);"></td>
+            <td><input type="button" class="button symbol" value="+" onclick="insertOp('+');" ></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="button number" value="4" onclick="insertNum(4);"></td>
+            <td><input type="button" class="button number" value="5" onclick="insertNum(5);"></td>
+            <td><input type="button" class="button number" value="6" onclick="insertNum(6);"></td>
+            <td><input type="button" class="button symbol" value="-" onclick="insertOp('-');"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="button number" value="7" onclick="insertNum(7);"></td>
+            <td><input type="button" class="button number" value="8" onclick="insertNum(8);"></td>
+            <td><input type="button" class="button number"  value="9" onclick="insertNum(9);"></td>
+            <td><input type="button" class="button symbol" value="*" onclick="insertOp('*');" ></td>
+        </tr>
+        <tr>
+                <td><input type="button" class="button number" value="0" onclick="insertNum(0);"></td>
+                <td><input type="button" class="button symbol" value="%" onclick="insertOp('%');"></td>
+                <td><input type="button" class="button symbol" value="."  onclick="insertDec('.');"></td>
+                <td><input type="button" class="button symbol" value="&#247;" onclick="insertOp('/');"></td>
+        </tr> 
+        <tr>
+                <td><input type="button" class="button symbol" value="C" onclick="clean();"></td>
+                <td><input type="button" class="button symbol" value="back" onclick="testfun();" ></td>
+                <td ><input type="button" class="button symbol" value="=" onclick="equalTo();"></td> 
+        </tr>
+    </table>
+    </div>
+   
+    
+    </body>
+</html>
