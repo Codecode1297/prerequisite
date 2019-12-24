@@ -1,0 +1,131 @@
+            <html>
+
+            <head>
+                <title>
+                    resume
+                </title>
+
+                <style>
+                    body{
+                        position: relative;
+                    }
+                    #div1 {
+                        height: 100%;
+                        width: 50%;
+                        background-color: darksalmon;
+                        border: blue;
+                        float: left;
+                    }
+
+                    #div2 {
+                        height: 100%;
+                        width: 50%;
+                        background-color: lightskyblue;
+                        border: black;
+                        float: right;
+                    }
+
+                    #container {
+                        background-color: lightyellow;
+                        height: 80%;
+                        width: 100%;
+                    }
+
+                    /* #academic {
+                        position: absolute;
+                        top: 30%;
+                        background-color: lightpink;
+                        width: 50%;
+                        height: 25%;
+                    } */
+                </style>
+            </head>
+
+            <body>
+                <div style="height: 100%; width: 100%; overflow: hidden; position: relative;">
+                    <div id="div1">
+                       
+                        <div>
+                            <h2 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; color: black;"> Build
+                            Resume</h2>
+                        </div>      
+
+                        <div id="container">
+                            <form>
+                                <div>
+
+                                    <table>
+                                        <tr>
+                                            <td style="font-weight: bold;">Name:</td>
+                                            <td> <input id="name" type="text" placeholder="Enter Your Full Name" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold;">Email:</td>
+                                            <td> <input id="Email" type="email" placeholder="Enter Your Email" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold;">Contact:</td>
+                                            <td> <input id="contact" type="tel" placeholder="Enter Your mobile number" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold;">Address:</td>
+                                            <td> <input id="contact" type="text" placeholder="Enter Your address" required></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            
+                                <div>
+                                                                        
+                                    
+                                            <!-- <div style="background-color: pink; position: absolute; top: 26%; width: 50%;" > -->
+                                            <table border="1">
+                                                <tr>
+                                                    <td style="font-weight: bold;" > SSC </td> <td> <table border="1"> <tr> <td> percentage</td> <td> <input type="text" placeholder="Percentage%"></td></tr> <tr> <td> board </td> <td> <input type="text" placeholder="Passing Board"></td></tr></table></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold;" > 12th/Diploma </td> <td> <table border="1"> <tr> <td> percentage</td> <td> <input type="text" placeholder="Percentage%"></td></tr> <tr> <td> board </td> <td> <input type="text" placeholder="Passing Board"></td></tr></table></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold;" > Degree </td> <td> <table border="1"> <tr> <td> percentage</td> <td> <input type="text" placeholder="Percentage%"></td></tr> <tr> <td> University </td> <td> <input type="text" placeholder="Passing University"></td></tr></table></td>
+                                                </tr>
+                                            </table>
+                                            
+                                            <!-- </div> -->
+                                    
+                                    
+                                </div>     
+                                        
+                                <div>
+                                    
+                                            <tr> 
+                                            <td style="font-weight: bold;"> Skills:</td>
+                                            <td>  <input type="checkbox" name="skills" value="java"> Java</td>
+                                            <td> <input type="checkbox" name="skills" value="cpp"> C++</td>
+                                            <td><input type="checkbox" name="skills" value="ds" checked>Data Structure </td>
+                                            <td><input type="checkbox" name="skills" value="bs" checked>BootStrap </td>
+                                            <td><input type="checkbox" name="skills" value="ms" checked>MeanStack </td>
+                                        </tr>
+                                    
+                                </div>
+
+                                <div>
+                                    <button onclick="myFunction()">add project</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                    <div id="div2">
+
+                    </div>
+                </div>
+
+                <script>
+                    function myFunction() {
+                      document.getElementById("div2").innerHTML = "Hello World";
+                    }
+                    </script>
+
+            </body>
+
+            </html>
