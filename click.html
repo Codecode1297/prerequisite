@@ -1,0 +1,32 @@
+
+<html>
+<head>
+    <script type="text/javascript">
+        
+        function tArea()
+        {
+         var div = document.getElementById('div_quotes');
+            div.innerHTML +="<br />";
+            div.innerHTML += "<input type='text' placeholder='title' name='text_new_author' id='title' />";
+           
+            div.innerHTML +="<br />";
+            div.innerHTML += "<textarea name='new_quote[]' />";
+            div.innerHTML += "\n<br />";
+           div.innerHTML +="<input type='button' onclick='show();' value='save'>";
+        }
+             function show(){
+              var title=document.getElementById("title");
+              var show=document.getElementById('showProject');
+              show.innerHTML=title.value;
+           }  
+    </script>
+</head>
+<body>
+<form method="post">
+    <input type="button" onclick="tArea();" value="Add new Project"> 
+
+<div id="div_quotes"></div>
+   </form>
+    <div id="showProject"></div>
+</body>
+</html>

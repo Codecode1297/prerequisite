@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <title>
+        resume
+    </title>
+    <style>
+        #div1 {
+            height: 100%;
+            width: 50%;
+            background-color: darksalmon;
+            border: blue;
+            float: left;
+        }
+
+        #div2 {
+            height: 100%;
+            width: 50%;
+            background-color: lightskyblue;
+            border: black;
+            float: right;
+        }
+
+        #container {
+            background-color: lightyellow;
+            height: 80%;
+            width: 100%;
+        }
+
+        /* #academic {
+            position: absolute;
+            top: 30%;
+            background-color: lightpink;
+            width: 50%;
+            height: 25%;
+        } */
+    </style>
+</head>
+
+<body>
+    <div style="height: 100%; width: 100%; overflow: hidden; position: relative;">
+        <div id="div1">
+            <h2 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; color: black;"> Build
+                Resume</h2>
+            <div id="container">
+                <form>
+                    <table>
+                        <tr>
+                            <td>Name:</td>
+                            <td> <input id="name" type="text" placeholder="Enter Your Full Name" required></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td> <input id="Email" type="email" placeholder="Enter Your Email" required></td>
+                        </tr>
+                        <tr>
+                            <td>Contact:</td>
+                            <td> <input id="contact" type="tel" placeholder="Enter Your mobile number" required></td>
+                        </tr>
+                        <tr>
+                            <td>Address:</td>
+                            <td> <input id="contact" type="text" placeholder="Enter Your address" required></td>
+                        </tr>
+                        <div id="academic">
+                            <tr>
+
+                                <table border="1">
+                                    <tr>
+                                        <th> SSC</th>
+                                        <th>12Th/ Diploma</th>
+                                        <th>Degree</th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <td>Percentage:</td>
+                                                    <td><input type="number" id="perssc" placeholder="percentage"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Board/uni:</td>
+                                                    <td><input type="text" id="board" placeholder="board or university">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <td>Percentage:</td>
+                                                    <td><input type="number" id="perdip" placeholder="percentage"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Board/uni:</td>
+                                                    <td><input type="text" id="dipboard"
+                                                            placeholder="board or university"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <td>Percentage:</td>
+                                                    <td><input type="number" id="perdeg" placeholder="percentage"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Board/uni:</td>
+                                                    <td><input type="text" id="uni" placeholder="board or university">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </tr>
+                        </div>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div id="div2">
+
+        </div>
+    </div>
+</body>
+
+</html>
