@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>
+            Ajax Page
+        </title>
+        <style>
+        .x{
+            /*border: 2px;
+            position: -webkit-sticky;
+            position: sticky;
+            width: 100%;*/
+          
+
+
+       position: -webkit-sticky;  
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  padding: 50px;
+  font-size: 20px;
+        }
+        </style>
+        <script>
+            function test()
+            {
+                var httpReq=new XMLHttpRequest();
+                httpReq.onreadystatechange=function()
+                {
+                    if(this.readyState==4 && this.status==200)
+                    {
+                       
+
+                       var jsonArray=JSON.parse(this.responseText);
+                       var contents='<table border="1px"><tr ><td style="position:sticky; position: -webkit-sticky" >UserID</td><td style="position:sticky; position: -webkit-sticky" >ID</td><td style="position:sticky; position: -webkit-sticky" >title</td><td style="position:sticky; position: -webkit-sticky" >body</td></tr>';
+                       
+                       for(i=0;i<jsonArray.length;i++)
+                       {
+
+                           var obj=jsonArray[i];
+                           var row="<tr>"+"<td>"+obj.userId+"</td>"+"<td>"+obj.id+"</td>"+"<td>"+obj.title+"</td>"+"<td>"+obj.body+"</td>"+"</tr>";
+                           contents+=row;
+                       }
+                       contents+="</table>";
+                       document.getElementById("div1").innerHTML=contents;
+
+                    }
+                };
+                httpReq.open("GET","https://jsonplaceholder.typicode.com/posts",true);
+                httpReq.send();
+            }
+        </script>
+    </head>
+
+<body>
+
+        <div>
+                <input type="button" value="submit" id="button1" onclick="test();">
+        </div>
+   
+        
+           
+
+    <div id="div1">
+
+    </div>
+
+
+</body>
+
+</html>

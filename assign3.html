@@ -1,0 +1,80 @@
+<html> 
+    <head>
+        <title>
+            Assignment..3
+        </title>
+        
+        <style>
+
+            .fixed_header{
+                width: 860px;
+                table-layout: fixed;
+                border-collapse: collapse;
+            }
+
+            .fixed_header tbody{
+              display:block;
+              width: 100%;
+              overflow: auto;
+              height: 100px;
+            }
+
+            .fixed_header thead tr {
+               display: block;
+            }
+
+            .fixed_header thead {
+              background: black;
+              color:#fff;
+            }
+
+            .fixed_header th, .fixed_header td {
+              padding: 5px;
+              text-align: left;
+              width: 200px;
+            }
+            
+        </style>
+        
+        <script>
+            function dataAvailabe()
+            {
+                if(this.readyState==4 && this.status==200)
+                    {
+                        var jsonArray = JSON.parse(this.responseText);
+
+                        var contents="<table border='1' class=fixed_header>" ;
+                            contents += " <thead><tr ><td>USERID</td><td>ID</td><td>TITLE</td><td>BODY</td></tr></thead>";
+                                            for(i=0; i<jsonArray.length;i++)
+                                            {
+                                                var obj = jsonArray[i];
+                                                var row = "<tr>" + "<td>" + obj.userId + "</td>" 
+                                                                 + "<td>" + obj.id + "</td>"
+                                                                 + "<td>" + obj.title + "</td>"
+                                                                 + "<td>" + obj.body + "</td>"
+                                                        +"</tr>";
+                                                contents += row;
+
+                                            }
+                        contents += "</table>";
+                        document.getElementById("output").innerHTML = contents;
+                    }
+            }
+   
+            function downloadDate()
+            {
+                var myurl="https://jsonplaceholder.typicode.com/posts";
+                var httpReq= new XMLHttpRequest();
+                httpReq.onreadystatechange=dataAvailabe;
+                httpReq.open("GET",myurl,true);
+                httpReq.send();
+            }
+        </script>
+    </head>
+    <body>
+     <button id="download" onclick="downloadDate();" > Download </button> <br>
+        
+        <div id="output">
+        </div>
+    </body>
+</html>

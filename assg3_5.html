@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            jquery
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+function test()
+            {
+               var myUrl="https://jsonplaceholder.typicode.com/users";
+               $.get(myUrl,function(data,status){
+                   $("#div1").html(JSON.stringify(data));
+               });
+
+            }
+
+
+    </script>
+        </head>
+       <body>
+
+        <div>
+                <input type="button" value="download" id="button1" onclick="test();">
+        </div>
+    <div id="div1">
+
+    </div>
+
+
+</body>
+</html>

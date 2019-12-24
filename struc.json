@@ -1,0 +1,24 @@
+var Student=[
+    {
+        "PRN":1,
+        "NAME":"Amit",
+        "Marks":[{"DBMS":20},{"AWP":45},{"OS":46}],
+        "Contact":9826644321,
+        "PERCENT":66
+    },
+    {
+        "PRN":2,
+        "NAME":"Rohan",
+        "Marks":[{"DBMS":20},{"AWP":10},{"OS":15}],
+        "Contact":9826624321,
+        "PERCENT":15
+    },
+    {
+        "PRN":3,
+        "NAME":"Ankur",
+        "Marks":[{"DBMS":32},{"AWP":9},{"OS":18}],
+        "Contact":8768875431,
+        "PERCENT":56
+    }
+]
+        

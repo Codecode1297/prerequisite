@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>
+            adding table
+        </title>
+
+        <style>
+        tr:nth-child(even) {
+  background:cornflowerblue;
+}
+        </style>
+
+
+        <script>
+        
+       obj=[{
+          "ItemName":"shoe",
+          "Price" :2500,
+          "category":"personal"
+        },
+        {
+          "ItemName":"T-shirt",
+          "Price" :1500,
+          "category":"germents"
+        },
+        {
+          "ItemName":"book",
+          "Price" :500,
+          "category":"stationary"
+        },
+        {
+          "ItemName":"belt",
+          "Price" :1000,
+          "category":"apperal"
+        },
+        {
+          "ItemName":"watch",
+          "Price" :15000,
+          "category":"accessories"
+        }]
+        //var x=JSON.parse("obj");
+        
+        function show()
+        {
+            var contents="<table id='tab' border='1px'><tr><th>checkbox</th><th>itemname</th><th>price</th><th>category</th></tr> ";
+            var i=0;
+           for(i=0;i<obj.length;i++)
+           {
+            var o=obj[i];
+            var row="<tr>"+"<td>"+"<input type='checkbox'>"+"</td>"+"<td>"+o.ItemName+"</td>"+"<td>"+o.Price+"</td>"+"<td>"+o.category+"</td>"+"</tr>";
+           contents+=row;
+           }
+           contents+="</table>";
+        document.getElementById("div2").innerHTML=contents; 
+        }
+        
+        </script>
+
+
+
+    </head>
+
+    <body>
+        <input type="button" value="add to table" onclick="show()">
+    </body>
+
+    <div id="div2"></div>
+</html>
