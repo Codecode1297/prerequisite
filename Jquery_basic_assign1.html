@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div id="myid">
+        <div id="btnDiv">
+            <input type='button' class='btn' id="addBtn" value="Add Btn" onclick='addBtns()'>
+            <input type='button' id="stpBtn" value="Stop Btn" onclick='disableBtns()'>
+        </div>
+
+    </div>
+    <script>
+        function addBtns() {
+            $('#btnDiv').append("<input class='btn' type='button' id='addBtn' value='Add Btn'  onclick='addBtns()'>")
+        }
+        function disableBtns() {
+            //  $(":button.btn").attr("disabled", true);
+            //  $(":button.btn").remove();
+            $(":button.btn").prop("onclick", null).off("click");
+        }
+    </script>
+</body>
+
+</html>
